@@ -1,0 +1,15 @@
+state: enabled
+_json:
+  avatar: 'null'
+  state: '"enabled"'
+email: foobar@localhost.local
+fullname: 'Foo Bar'
+language: en
+twofa_enabled: false
+twofa_secret: 3TYUYKLY2HRASCCPK4IBA7MYEUJK2VZP
+groups:
+  - Editor
+access:
+  site: {  }
+  admin: {  }
+  admin-addon-user-manager: {  }

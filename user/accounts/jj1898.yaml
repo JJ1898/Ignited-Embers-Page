@@ -1,0 +1,16 @@
+state: enabled
+email: jordanmedrano@gmail.com
+fullname: 'Jordan Medrano'
+title: Administrator
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$JvhWOjx39f47LnAGiv/cAOd0kskdBqh3.yqN1Ch31IS1W6zQ9yuQK
+groups:
+  - Administrator
+pw_resets:
+  - 1566377245
+reset: '0ceeb4f546d24df1cda3c960efeab8c4::1566982045'
