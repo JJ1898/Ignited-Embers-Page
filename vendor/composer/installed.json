@@ -47,17 +47,17 @@
     },
     {
         "name": "composer/ca-bundle",
-        "version": "1.2.3",
-        "version_normalized": "1.2.3.0",
+        "version": "1.2.4",
+        "version_normalized": "1.2.4.0",
         "source": {
             "type": "git",
             "url": "https://github.com/composer/ca-bundle.git",
-            "reference": "f26a67e397be0e5c00d7c52ec7b5010098e15ce5"
+            "reference": "10bb96592168a0f8e8f6dcde3532d9fa50b0b527"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/composer/ca-bundle/zipball/f26a67e397be0e5c00d7c52ec7b5010098e15ce5",
-            "reference": "f26a67e397be0e5c00d7c52ec7b5010098e15ce5",
+            "url": "https://api.github.com/repos/composer/ca-bundle/zipball/10bb96592168a0f8e8f6dcde3532d9fa50b0b527",
+            "reference": "10bb96592168a0f8e8f6dcde3532d9fa50b0b527",
             "shasum": ""
         },
         "require": {
@@ -70,7 +70,7 @@
             "psr/log": "^1.0",
             "symfony/process": "^2.5 || ^3.0 || ^4.0"
         },
-        "time": "2019-08-02T09:05:43+00:00",
+        "time": "2019-08-30T08:44:50+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -254,17 +254,17 @@
     },
     {
         "name": "donatj/phpuseragentparser",
-        "version": "v0.13.0",
-        "version_normalized": "0.13.0.0",
+        "version": "v0.14.0",
+        "version_normalized": "0.14.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/donatj/PhpUserAgent.git",
-            "reference": "5f2da266d2a386f9b231d4344ae37baf7a467c2d"
+            "reference": "199f22df0c3fd0fb7de024dedbd052064bfb34fb"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/donatj/PhpUserAgent/zipball/5f2da266d2a386f9b231d4344ae37baf7a467c2d",
-            "reference": "5f2da266d2a386f9b231d4344ae37baf7a467c2d",
+            "url": "https://api.github.com/repos/donatj/PhpUserAgent/zipball/199f22df0c3fd0fb7de024dedbd052064bfb34fb",
+            "reference": "199f22df0c3fd0fb7de024dedbd052064bfb34fb",
             "shasum": ""
         },
         "require": {
@@ -275,7 +275,7 @@
             "donatj/drop": "*",
             "phpunit/phpunit": "~4.8"
         },
-        "time": "2019-03-08T20:52:23+00:00",
+        "time": "2019-09-30T16:32:02+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -290,9 +290,9 @@
         "authors": [
             {
                 "name": "Jesse G. Donat",
-                "role": "Developer",
                 "email": "donatj@gmail.com",
-                "homepage": "http://donatstudios.com"
+                "homepage": "http://donatstudios.com",
+                "role": "Developer"
             }
         ],
         "description": "Lightning fast, minimalist PHP UserAgent string parser.",
@@ -1035,17 +1035,17 @@
     },
     {
         "name": "monolog/monolog",
-        "version": "1.24.0",
-        "version_normalized": "1.24.0.0",
+        "version": "1.25.1",
+        "version_normalized": "1.25.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/Seldaek/monolog.git",
-            "reference": "bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266"
+            "reference": "70e65a5470a42cfec1a7da00d30edb6e617e8dcf"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266",
-            "reference": "bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266",
+            "url": "https://api.github.com/repos/Seldaek/monolog/zipball/70e65a5470a42cfec1a7da00d30edb6e617e8dcf",
+            "reference": "70e65a5470a42cfec1a7da00d30edb6e617e8dcf",
             "shasum": ""
         },
         "require": {
@@ -1081,7 +1081,7 @@
             "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
             "sentry/sentry": "Allow sending log messages to a Sentry server"
         },
-        "time": "2018-11-05T09:00:11+00:00",
+        "time": "2019-09-06T13:49:17+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1115,17 +1115,17 @@
     },
     {
         "name": "nyholm/psr7",
-        "version": "1.1.0",
-        "version_normalized": "1.1.0.0",
+        "version": "1.2.1",
+        "version_normalized": "1.2.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/Nyholm/psr7.git",
-            "reference": "701fe7ea8c12c07b985b156d589134d328160cf7"
+            "reference": "55ff6b76573f5b242554c9775792bd59fb52e11c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Nyholm/psr7/zipball/701fe7ea8c12c07b985b156d589134d328160cf7",
-            "reference": "701fe7ea8c12c07b985b156d589134d328160cf7",
+            "url": "https://api.github.com/repos/Nyholm/psr7/zipball/55ff6b76573f5b242554c9775792bd59fb52e11c",
+            "reference": "55ff6b76573f5b242554c9775792bd59fb52e11c",
             "shasum": ""
         },
         "require": {
@@ -1143,7 +1143,7 @@
             "php-http/psr7-integration-tests": "dev-master",
             "phpunit/phpunit": "^7.5"
         },
-        "time": "2019-02-16T17:20:43+00:00",
+        "time": "2019-09-05T13:24:16+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1960,17 +1960,17 @@
     },
     {
         "name": "symfony/contracts",
-        "version": "v1.1.5",
-        "version_normalized": "1.1.5.0",
+        "version": "v1.1.7",
+        "version_normalized": "1.1.7.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/contracts.git",
-            "reference": "3f3f796d5f24a098a9da62828b8daa1b11494c1b"
+            "reference": "9cb52490dd60e0f50dbcdbdb3a6dbcb31f3a363e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/contracts/zipball/3f3f796d5f24a098a9da62828b8daa1b11494c1b",
-            "reference": "3f3f796d5f24a098a9da62828b8daa1b11494c1b",
+            "url": "https://api.github.com/repos/symfony/contracts/zipball/9cb52490dd60e0f50dbcdbdb3a6dbcb31f3a363e",
+            "reference": "9cb52490dd60e0f50dbcdbdb3a6dbcb31f3a363e",
             "shasum": ""
         },
         "require": {
@@ -1996,7 +1996,7 @@
             "symfony/service-implementation": "",
             "symfony/translation-implementation": ""
         },
-        "time": "2019-06-20T06:46:26+00:00",
+        "time": "2019-10-04T21:43:27+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -2594,29 +2594,29 @@
     },
     {
         "name": "twig/twig",
-        "version": "v1.42.2",
-        "version_normalized": "1.42.2.0",
+        "version": "v1.42.3",
+        "version_normalized": "1.42.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/twigphp/Twig.git",
-            "reference": "21707d6ebd05476854805e4f91b836531941bcd4"
+            "reference": "201baee843e0ffe8b0b956f336dd42b2a92fae4e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/twigphp/Twig/zipball/21707d6ebd05476854805e4f91b836531941bcd4",
-            "reference": "21707d6ebd05476854805e4f91b836531941bcd4",
+            "url": "https://api.github.com/repos/twigphp/Twig/zipball/201baee843e0ffe8b0b956f336dd42b2a92fae4e",
+            "reference": "201baee843e0ffe8b0b956f336dd42b2a92fae4e",
             "shasum": ""
         },
         "require": {
-            "php": ">=5.4.0",
+            "php": ">=5.5.0",
             "symfony/polyfill-ctype": "^1.8"
         },
         "require-dev": {
             "psr/container": "^1.0",
-            "symfony/debug": "^2.7",
-            "symfony/phpunit-bridge": "^3.4.19|^4.1.8|^5.0"
+            "symfony/debug": "^3.4|^4.2",
+            "symfony/phpunit-bridge": "^4.4@dev|^5.0"
         },
-        "time": "2019-06-18T15:35:16+00:00",
+        "time": "2019-08-24T12:51:03+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -2639,19 +2639,19 @@
         "authors": [
             {
                 "name": "Fabien Potencier",
-                "role": "Lead Developer",
                 "email": "fabien@symfony.com",
-                "homepage": "http://fabien.potencier.org"
-            },
-            {
-                "name": "Armin Ronacher",
-                "role": "Project Founder",
-                "email": "armin.ronacher@active-4.com"
+                "homepage": "http://fabien.potencier.org",
+                "role": "Lead Developer"
             },
             {
                 "name": "Twig Team",
-                "role": "Contributors",
-                "homepage": "https://twig.symfony.com/contributors"
+                "homepage": "https://twig.symfony.com/contributors",
+                "role": "Contributors"
+            },
+            {
+                "name": "Armin Ronacher",
+                "email": "armin.ronacher@active-4.com",
+                "role": "Project Founder"
             }
         ],
         "description": "Twig, the flexible, fast, and secure template language for PHP",
