@@ -26,7 +26,7 @@ abstract class HttpClientTestCase extends TestCase
 {
     private static $server;
 
-    public static function setUpBeforeClass(): void
+    public static function setUpBeforeClass()
     {
         TestHttpServer::start();
     }
@@ -446,7 +446,7 @@ abstract class HttpClientTestCase extends TestCase
 
         $body = $response->toArray();
 
-        $this->assertStringContainsString('json', $body['content-type']);
+        $this->assertContains('json', $body['content-type']);
         unset($body['content-type']);
         $this->assertSame(['foo' => 'bar', 'REQUEST_METHOD' => 'POST'], $body);
     }
@@ -503,21 +503,6 @@ abstract class HttpClientTestCase extends TestCase
         $response->cancel();
         $this->expectException(TransportExceptionInterface::class);
         $response->getHeaders();
-    }
-
-    public function testCancelInStream()
-    {
-        $client = $this->getHttpClient(__FUNCTION__);
-        $response = $client->request('GET', 'http://localhost:8057/404');
-
-        foreach ($client->stream($response) as $chunk) {
-            $response->cancel();
-        }
-
-        $this->expectException(TransportExceptionInterface::class);
-
-        foreach ($client->stream($response) as $chunk) {
-        }
     }
 
     public function testOnProgressCancel()
@@ -580,17 +565,7 @@ abstract class HttpClientTestCase extends TestCase
 
         $response = null;
         $this->expectException(TransportExceptionInterface::class);
-        $client->request('GET', 'http://symfony.com:8057/', ['timeout' => 1]);
-    }
-
-    public function testNotATimeout()
-    {
-        $client = $this->getHttpClient(__FUNCTION__);
-        $response = $client->request('GET', 'http://localhost:8057/timeout-header', [
-            'timeout' => 0.5,
-        ]);
-        usleep(510000);
-        $this->assertSame(200, $response->getStatusCode());
+        $client->request('GET', 'http://symfony.com:8057/', ['timeout' => 3]);
     }
 
     public function testTimeoutOnAccess()
@@ -653,6 +628,7 @@ abstract class HttpClientTestCase extends TestCase
     {
         $client = $this->getHttpClient(__FUNCTION__);
 
+        $downloaded = 0;
         $start = microtime(true);
         $client->request('GET', 'http://localhost:8057/timeout-long');
         $client = null;
@@ -715,11 +691,11 @@ abstract class HttpClientTestCase extends TestCase
         $headers = $response->getHeaders();
 
         $this->assertSame(['Accept-Encoding'], $headers['vary']);
-        $this->assertStringContainsString('gzip', $headers['content-encoding'][0]);
+        $this->assertContains('gzip', $headers['content-encoding'][0]);
 
         $body = $response->toArray();
 
-        $this->assertStringContainsString('gzip', $body['HTTP_ACCEPT_ENCODING']);
+        $this->assertContains('gzip', $body['HTTP_ACCEPT_ENCODING']);
     }
 
     public function testBaseUri()
@@ -745,15 +721,6 @@ abstract class HttpClientTestCase extends TestCase
         $this->assertSame('/?a=a&b=b', $body['REQUEST_URI']);
     }
 
-    public function testInformationalResponse()
-    {
-        $client = $this->getHttpClient(__FUNCTION__);
-        $response = $client->request('GET', 'http://localhost:8057/103');
-
-        $this->assertSame('Here the body', $response->getContent());
-        $this->assertSame(200, $response->getStatusCode());
-    }
-
     /**
      * @requires extension zlib
      */
@@ -767,7 +734,7 @@ abstract class HttpClientTestCase extends TestCase
         $headers = $response->getHeaders();
 
         $this->assertSame(['Accept-Encoding'], $headers['vary']);
-        $this->assertStringContainsString('gzip', $headers['content-encoding'][0]);
+        $this->assertContains('gzip', $headers['content-encoding'][0]);
 
         $body = $response->getContent();
         $this->assertSame("\x1F", $body[0]);
@@ -786,25 +753,5 @@ abstract class HttpClientTestCase extends TestCase
 
         $this->expectException(TransportExceptionInterface::class);
         $response->getContent();
-    }
-
-    public function testMaxDuration()
-    {
-        $client = $this->getHttpClient(__FUNCTION__);
-        $response = $client->request('GET', 'http://localhost:8057/max-duration', [
-            'max_duration' => 0.1,
-        ]);
-
-        $start = microtime(true);
-
-        try {
-            $response->getContent();
-        } catch (TransportExceptionInterface $e) {
-            $this->addToAssertionCount(1);
-        }
-
-        $duration = microtime(true) - $start;
-
-        $this->assertLessThan(10, $duration);
     }
 }
